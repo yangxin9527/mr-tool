@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+
+  "name": "微伴助手",
+  "description": "用于微伴各个环境切换，保存用户session",
+  "version": "0.4",
+
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "index.html"
+  },
+  "permissions": [],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://jira.yiban.io/*"],
+      "css": ["./static/toastify.min.css"],
+      "js": ["target.js","./static/toastify-js.js"]
+    }
+  ],
+  "host_permissions": ["http://*/", "https://*/", "*://*/*"]
+}
