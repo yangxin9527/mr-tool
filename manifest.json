@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
 
-  "name": "微伴助手",
-  "description": "用于微伴各个环境切换，保存用户session",
+  "name": "微伴MR助手",
+  "description": "用于快速提交MR",
   "version": "0.4",
 
   "action": {
@@ -21,7 +21,7 @@
   "content_scripts": [
     {
       "matches": ["*://jira.yiban.io/*"],
-      "css": ["./static/toastify.min.css"],
+      "css": ["./static/toastify.min.css","./static/target.css"],
       "js": ["target.js","./static/toastify-js.js"]
     }
   ],
