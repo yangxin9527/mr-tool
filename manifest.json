@@ -9,7 +9,8 @@
     "default_icon": "icon.png",
     "default_popup": "index.html"
   },
-  "permissions": [],
+  "devtools_page":"devtools.html",
+  "permissions": ["tabs"],
   "background": {
     "service_worker": "background.js"
   },
@@ -20,7 +21,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://jira.yiban.io/*"],
+      "matches": ["*://jira.yiban.io/*","*://www.apifox.cn/*"],
       "css": ["./static/toastify.min.css","./static/target.css"],
       "js": ["target.js","./static/toastify-js.js"]
     }
